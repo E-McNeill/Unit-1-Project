@@ -14,6 +14,13 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
+var quotes = [
+  {quote:"I didn/'t do it. Nobody saw me do it. you can/'t prove anything.", source:"Bart Simpson", citation:"The Simpsons, Season 1, Episode 6", year:"February 11th 1990"},
+  {quote:"Maybe, just once, someone will call me /'Sir/' without adding, /'You/'re making a scene/’.", source:"Homer Simpson", citation:"The Simpsons, Season 7, Episode 14", year:"February 4th 1996"},
+  {quote:"Ow, my eye! I/'m not supposed to get pudding in it!", source:"Lenny Leonard", citation:"The Simpsons, Season 12, Episode 5", year:"November 26th 2000"},
+  {quote:"There/'s something about flying a kite at night that/'s so unwholesome.", source:"Marge Simpson", citation:"The Simpsons, Season 6, Episode 21", year:"April 16th 1995"},
+  {quote:"Don/'t make me run! I/'m full of chocolate!", source:"Uter", citation:"The Simpsons, Season 8, Episode 7", year:"November 19th 1995"}  
+];
 
 
 
@@ -24,7 +31,11 @@ project 1 - A Random Quote Generator
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
-
+function getRandomQuote() {
+  var randomNumber = quotes[Math.floor(Math.random()*quotes.length)];
+  return randomNumber;
+}
+console.log(getRandomQuote());
 
 
 /***
