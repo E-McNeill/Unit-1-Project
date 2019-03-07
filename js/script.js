@@ -39,7 +39,10 @@ function printQuote() {
         if (quoteHolder.year) {
         entireString += '<span class="year">' + quoteHolder.year + '</span>'; 
         }
-   entireString += '<br>' + '<br>' + '<span class="tag">' + quoteHolder.tag + '</span>' + '</p>';
+        if (quoteHolder.tag) {
+        entireString += '<br>' + '<br>' +'<span class="tag">' + quoteHolder.tag + '</span>'; 
+        }
+   entireString += '</p>';
     
   document.getElementById('quote-box').innerHTML = entireString;
   document.body.style.backgroundColor = getRandomColour();
